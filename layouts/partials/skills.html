@@ -3,13 +3,14 @@
 <section id="skills" class="navy text-light">
   <h2 class="heading">{{ $skills.title }}</h2>
 
-  {{ range $key, $value := $skills.skills }}
+  {{ range $skill := $skills.skills }}
 
   <div class="skill">
-    <span class="h6">{{ $key }}</span>
+    <span class="h6">{{ $skill.name }}</span>
     <div class="progress">
-      <div class="progress-bar bg-pink" role="progressbar" style="width: {{ $value }}%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar bg-pink" role="progressbar" style="width: {{ $skill.value }}%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
   </div>
+
   {{ end }}
 </section>
